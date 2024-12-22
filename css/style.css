@@ -1,0 +1,171 @@
+body {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 20px 0;
+    color: black;
+    background-color: rgba(224, 217, 217, 0.5);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+.fa-github,
+.fa-solid {
+    font-size: 15px;
+}
+
+.inputArea {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.displayBox {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.todo-block {
+    width: 30%;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.container {
+    min-height: 200px;
+    margin-top: 10px;
+    border: 2px black solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px black;
+
+}
+
+.todo {
+    padding: 5px;
+    background-color: aquamarine;
+    color: black;
+    box-shadow: 2px 2px 2px 2px green;
+    border-radius: 3px;
+    width: fit-content;
+    cursor: grab;
+    margin: 10px 5px;
+}
+
+.moving {
+    opacity: .5;
+    box-shadow: 2px 2px 2px 2px darkcyan;
+    cursor: grabbing;
+}
+
+
+
+.urgent .todo {
+    color: red;
+    font-weight: bold;
+
+}
+
+.inputArea .done .todo {
+    opacity: 0.8;
+    text-decoration: line-through;
+    color: gray;
+
+}
+
+footer {
+    margin-top: auto;
+    background-color: rgba(224, 217, 217, 0.5);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+#trashcan {
+    width: 50px;
+    min-height: 50px;
+    margin: 10px auto;
+    background-color: red;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-trash-can {
+    position: absolute;
+}
+
+/* border animation */
+.animate-border {
+    border-width: 3px;
+    border-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet) 1;
+    animation: move-border 2s linear infinite;
+    box-shadow: none;
+}
+
+@keyframes move-border {
+    0% {
+        border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    }
+
+    25% {
+        border-image-source: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
+    }
+
+    50% {
+        border-image-source: linear-gradient(225deg, red, orange, yellow, green, blue, indigo, violet);
+    }
+
+    75% {
+        border-image-source: linear-gradient(315deg, red, orange, yellow, green, blue, indigo, violet);
+    }
+
+    100% {
+        border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .displayBox {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .todo-block {
+        width: 80%;
+    }
+
+    .inputArea {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+        gap: 5px;
+    }
+}

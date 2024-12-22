@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>TodoList</title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <h1>TodoList</h1>
+                <a href="#">Portfolio <i class="fa-solid fa-briefcase"></i></a>
+            </nav>
+
+        </header>
+        <main>
+            <div class="inputArea">
+                <label for="addTodo">Write your todo :</label>
+                <input type="text" id="addTodo">
+            </div>
+            <section class="displayBox">
+                <div class="todo-block">
+                    <h2>URGENT</h2>
+                    <div class="container urgent">
+                    </div>
+                </div>
+                <div class="todo-block">
+                    <h2>TODO Later</h2>
+                    <div class="container notUrgent">
+                    </div>
+                </div>
+                <div class="todo-block">
+                    <h2 class="welldone">DONE</h2>
+                    <div class="container done" id="confetti-box">
+                    </div>
+                </div>
+            </section>
+            <div class="container trashcan" id="trashcan">
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+        </main>
+
+        <footer>
+            <p>copyrights 2024 &copy;</p>
+        </footer>
+
+        <script src="./js/main.js"></script>
+        <script src="https://kit.fontawesome.com/b5ec06757b.js" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
