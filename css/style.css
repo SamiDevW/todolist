@@ -86,10 +86,10 @@ h2 {
 .urgent .todo {
     color: red;
     font-weight: bold;
-
 }
 
-.inputArea .done .todo {
+
+.done .todo {
     opacity: 0.8;
     text-decoration: line-through;
     color: gray;
